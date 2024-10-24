@@ -134,7 +134,12 @@ All of our components are inside `src/components` folder.
 - Hoover effect `hover:text-[#FFD166 ]`
 - This is going to be our Button functionality we assign as we start using it in the Hero Page and Cards (to be updated later): `onClick: () => void;`
 
-5. **TutorCard**: to be created
+5. **CardContainer**: 
+- Fetches the tutor from the backend
+- Button component links to the Calendar component, where students can see the tutors availability and book sessions.
+- Once sessions are booked, the calendar component communicates with database to change the state of a session. 
+- In the front end we are using a colour palette and a popo up Modal component to inform the user that the session has been booked succesfully.
+- When sessions are already booked by a student, other users cannot book it and the Modal component will inform them with a message.
 
 6. **Layout**: used in each page for consistency. Navbar at the top, body, Footer at the bottom.
 
@@ -165,3 +170,5 @@ All of our components are inside `src/components` folder.
 - Dynamic Form Toggle - users can switch between login and sign-up forms easily without reloading the page
 - Validation and Sanitisation is processed in the backend
 - Once user is logged in succesfully, redirects to homepage and the `My Account` navbar link becomes `Student Dashboard` or `Tutor Dashboard` depending on what role the user got. Furthermore the `login` link changes to `logout`.
+6. **Tutors**:
+- This page uses the CardContainer component, ddisplaying all of our available tutors

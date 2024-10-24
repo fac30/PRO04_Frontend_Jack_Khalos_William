@@ -13,9 +13,8 @@ const CardsContainer: React.FC = () => {
         );
       }
       const tutorData = await response.json();
-
       setTutors(tutorData);
-      console.log(tutorData);
+      // console.log(tutorData);
     } catch (error) {
       console.log(error);
     }
@@ -26,7 +25,7 @@ const CardsContainer: React.FC = () => {
   }, []);
 
   return (
-    <div className="mt-12 md:grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
+    <div className="mt-12 grid gap-6 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
       {tutors.map((tutor, index) => (
         <Card key={index} tutor={tutor} />
       ))}

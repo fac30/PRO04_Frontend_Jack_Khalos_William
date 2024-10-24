@@ -5,6 +5,7 @@ import TutorProfile from "./pages/TutorProfile";
 import Subjects from "./pages/Subjects";
 import Authentication from "./pages/Authentication";
 import { UserProvider } from "./context/UserContext";
+import Tutors from "./pages/Tutors";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/tutorprofile" element={<TutorProfile />} />
+          <Route path="/tutors" element={<Tutors />} />
           <Route path="/subjects" element={<Subjects />} />
           <Route path="/auth" element={<Authentication />} />
         </Routes>

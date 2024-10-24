@@ -24,15 +24,20 @@ const Card = ({ tutor }: CardProps) => {
   const navigate = useNavigate();
 
   const handleLearnWithMeClick = () => {
-    // Navigate to the TutorProfile route, passing tutor details in state
     navigate("/tutorprofile", { state: { tutor } });
   };
 
   return (
-    <div className="mb-16 p-8 rounded-md font-helonik tutor-card bg-zubiGreen w-10/12 m-auto text-white flex flex-col items-center gap-7">
-      <h3 className="text-2xl">{tutor.full_name}</h3>
-      <img src={tutor.img_source} className="h-44 w-64 bg-white rounded-md" />
-      <p className="font-sans leading-5">{tutor.description}</p>
+    <div className="mb-16 p-6 rounded-lg font-helonik tutor-card bg-zubiGreen w-full sm:w-10/12 m-auto text-white flex flex-col items-center gap-6 transition-all shadow-lg">
+      <h3 className="text-xl font-bold text-center w-full h-12 overflow-hidden text-ellipsis whitespace-nowrap">{tutor.full_name}</h3>
+      <div className="w-full h-48 md:h-56 lg:h-64 overflow-hidden rounded-md">
+        <img 
+          src={tutor.img_source} 
+          alt={tutor.full_name} 
+          className="object-cover w-full h-full" 
+        />
+      </div>
+      <p className="text-center font-sans leading-5 line-clamp-4">{tutor.description}</p>
       <Button
         onClick={handleLearnWithMeClick}
         label="learn with me"
