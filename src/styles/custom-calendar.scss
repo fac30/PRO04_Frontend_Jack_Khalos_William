@@ -13,6 +13,7 @@ $event-outline: #3b99fc !default;
 $event-color: #fff !default;
 $event-border-radius: 5px !default;
 $event-padding: 2px 10px !default;
+$event-width: 1000px !default;
 $event-zindex: 4 !default;
 $btn-color: #fff !default;
 // $btn-bg: #000 !default;
@@ -23,4 +24,10 @@ $today-highlight-bg: #495d63 !default;
 // Import default styles after variables are set
 @import "react-big-calendar/lib/sass/styles";
 
-// Optionally, add any custom CSS rules here
+.rbc-time-slot {
+  min-height: 45px;
+}
+
+.rbc-events-container {
+  margin-right: 0 !important;
+}

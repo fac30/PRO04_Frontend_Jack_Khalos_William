@@ -25,14 +25,12 @@ const CardsContainer: React.FC = () => {
   }, []);
 
   return (
-    <div className="mt-12 grid gap-6 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+    <div className="mt-12 grid gap-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 w-11/12 m-auto lg:w-full">
       {tutors.map((tutor, index) => (
         <Card key={index} tutor={tutor} />
       ))}
     </div>
   );
-
-  // return <h1>{tutors.length > 0 ? tutors[0].full_name : "Loading..."}</h1>; // Handle empty state
 };
 
 export default CardsContainer;
